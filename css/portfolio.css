@@ -1,0 +1,140 @@
+.titulo-portfolio{
+  display: flex;
+  justify-content: space-between;
+}
+
+.servicos-portfolio{
+  display: flex;
+  gap: 20px;
+  font-weight: bold;
+  font-family: 'Fira Sans';
+  background-color: var(--pri);
+}
+
+.servicos-portfolio span.ativo{
+  background-color: var(--primaria4);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 20px;
+  border: 1px solid var(--black);
+}
+
+.servicos-portfolio span{
+  background-color: transparent;
+  color: var(--black);
+  padding: 12px 24px;
+  border-radius: 20px;
+  border: 1px solid var(--black);
+  cursor: pointer;
+}
+
+/* cards */
+.img-portfolio{
+  margin: 0px;
+  padding: 20px;
+}
+
+.card-portfolio{
+  display: grid;
+  grid-template-columns: 750px 1fr;
+  gap: 20px;
+  margin-top: 30px;
+  border: 1px solid var(--white);
+  border-radius: 20px;
+  box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.10);
+}
+
+/* .card-portfolio.ativo{
+  
+} */
+
+.card-texto h3{
+  color: var(--black);
+  margin-top: 20px;
+}
+
+.card-texto{
+  padding: 20px;
+  text-align: center;
+  max-width: 50ch;
+  
+}
+
+.card-tech{
+  border-radius: 5px;
+  background: var(--white);
+  box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.10);
+  padding: 8px 16px;
+  margin-right: 10px;
+  font-weight: bold;
+  display: inline-block;
+  margin: 7px;
+}
+
+.portfolio-tech{
+  margin: 30px 0px 10px 0px;
+
+}
+
+.portfolio-link{
+  font-size: 1rem;
+  text-decoration: underline;
+  color: var(--cinza);
+  font-weight: bold;
+  margin-right: 30px;
+  text-align: center;
+}
+
+.portfolio-link a{
+  margin-bottom: 15px;
+  align-items: end;
+
+}
+
+.portfolio-link img{
+  padding-top: 15px;
+  margin-left: 5px;
+}
+
+.portfolio-grupo-link{
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 769px){
+  .card-portfolio{
+    grid-template-columns: 1fr;
+  }
+
+  .titulo-portfolio{
+    flex-wrap: wrap;
+    font-size: 1rem;
+  }
+
+  .titulo-portfolio span{
+    font-size: 0.9rem;
+    text-align: center;
+    display: flex;
+    place-items: center;
+  }
+
+  .servicos-portfolio span.ativo{
+    padding: 10px 20px;
+  }
+  
+  .servicos-portfolio span{
+    padding: 10px 20px;
+  }
+  
+}
+
+@media (max-width: 369px){
+  .titulo-portfolio{
+    flex-wrap: wrap;
+    font-size: 1rem;
+  }
+
+  .titulo-portfolio span{
+    font-size: 0.7rem;
+  }
+}

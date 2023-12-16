@@ -1,0 +1,85 @@
+.sobre-bg {
+  background-color: var(--fundo);
+  box-shadow: inset 0 80px var(--white);
+  box-shadow: inset 0 80px var(--white), inset 0 -80px var(--white);
+}
+
+.sobre {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin-top: 120px;
+  align-items: center;
+}
+
+.sobre-foto img {
+  border-radius: 20px;
+  width: 500px;
+  height: 900px;
+  object-fit: cover;
+}
+
+
+.sobre-desc p {
+  max-width: 38ch;
+}
+
+.sobre-historia {
+  font-family: "Poppins";
+  font-size: 1.6rem;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+
+.sobre-historia img {
+  display: inline-block;
+}
+
+.sobre-historia:hover:after {
+  content: "";
+  position: absolute;
+  animation: sublinha-historia 0.3s forwards;
+  top: calc(100% - 20%);
+  left: 10px;
+  z-index: -1;
+  top: 20px;
+}
+
+@keyframes sublinha-historia {
+  from {
+    background-color: var(--primaria1);
+    
+    width: 0px;
+    height: 16px;
+  }
+  to {
+    background-color: var(--primaria1);
+    display: block;
+    width: 100%;
+    height: 16px;
+  }
+}
+
+@media (max-width: 769px) {
+  .sobre {
+    grid-template-columns: 1fr;
+    margin-top: 60px;
+    flex-direction: column;
+  }
+
+  .sobre-desc {
+    order: 1;
+  }
+
+  .sobre-foto img {
+    border-radius: 40px;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+
+  .sobre-foto {
+    order: 2;
+  }
+}

@@ -1,0 +1,102 @@
+:root{
+  --primaria1: #47E14C;
+  --primaria2: #95D754;
+  --primaria3: #EEF296;
+  --primaria4: #006021;
+  --contraste: #FF8F8F;
+
+  --black: #121212;
+  --white: #ffffff;
+  --cinza: #9c9c9c;
+  --fundo: #F7F7F7
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Fira Sans', sans-serif, Verdana, Geneva, Tahoma, sans-serif;
+ 
+}
+
+body {
+  font-family: "Poppins";
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+ul,
+li,
+dd,
+dt,
+dd {
+  list-style: none;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+h1 {
+  font-size: 2.75rem;
+  margin-bottom: 16px;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: bold;
+  color: var(--primaria4);
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+p{
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+h2::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: var(--contraste);
+  top: 5px;
+  margin-right: 16px;
+  margin-bottom: 4px;
+  
+}
+
+/* .js-scroll {
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+  transition: 0.5s;
+}
+
+.js-scroll.ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+} */

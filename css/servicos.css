@@ -1,0 +1,87 @@
+.servicos-itens {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.servicos-web,
+.servicos-ui,
+.servicos-app {
+  background-color: var(--white);
+  padding: 30px;
+  text-align: center;
+  border: 1px solid var(--white);
+  box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.10);
+  border-radius: 20px;
+}
+
+.servicos-web,
+.servicos-ui,
+.servicos-app {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.servicos .img-icones {
+  margin-bottom: 30px;
+  display: inline-block;
+  text-align: center;
+}
+
+.servicos a, img{
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 1.3rem;
+  margin-top: 10px;
+  z-index: 1;
+  position: relative;
+}
+
+.servicos a:hover:after {
+  content: "";
+  position: absolute;
+  animation: sublinha-historia 0.3s forwards;
+  top: calc(100% - 20%);
+  left: 10px;
+  z-index: -1;
+  top: 20px;
+}
+
+@keyframes sublinha-historia {
+  from {
+    background-color: var(--primaria1);
+    
+    width: 0px;
+    height: 16px;
+  }
+  to {
+    background-color: var(--primaria1);
+    display: block;
+    width: 100%;
+    height: 16px;
+  }
+}
+
+.img-icones{
+  width: 270px;
+}
+
+@media (max-width: 768px) {
+  .servicos-itens {
+    grid-template-columns: 1fr;
+  }
+
+  .titulo-h1 {
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .servicos p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
+  .img-icones{
+    width: 200px;
+  }
+}
