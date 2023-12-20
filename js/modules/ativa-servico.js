@@ -1,29 +1,38 @@
 export default function initAtivaServico() {
   document.addEventListener('DOMContentLoaded', function () {
-    // Obtém todos os elementos com a classe "servicos-portfolio span"
-    var elementosPortfolio = document.querySelectorAll(
-      '.servicos-portfolio span',
-    );
+    var filtros = document.querySelectorAll('.filtro');
+    var cards = document.querySelectorAll('.card-portfolio');
 
-    // Adiciona um evento de clique a cada elemento
-    elementosPortfolio.forEach(function (elemento) {
-      elemento.addEventListener('click', function () {
-        // Se o elemento clicado já está ativo e é o único ativo, não faz nada
-        if (
-          elemento.classList.contains('ativo') &&
-          document.querySelectorAll('.servicos-portfolio span.ativo').length ===
-            1
-        ) {
+    filtros.forEach(function (filtro) {
+      filtro.addEventListener('click', function () {
+        // Se o filtro clicado já está ativo, não faz nada
+        if (filtro.classList.contains('ativo')) {
           return;
         }
 
-        // Alterna a classe 'ativo' do elemento clicado
-        elemento.classList.toggle('ativo');
+        // Remove a classe 'ativo' de todos os filtros
+        filtros.forEach(function (f) {
+          f.classList.remove('ativo');
+        });
+
+        // Adiciona a classe 'ativo' ao filtro clicado
+        filtro.classList.add('ativo');
+
+        // Filtra os cards com base no filtro selecionado
+        var filtroSelecionado = filtro.dataset.filter;
+
+        cards.forEach(function (card) {
+          // Mostra apenas os cards que têm a classe correspondente ao filtro selecionado
+          if (card.classList.contains(filtroSelecionado)) {
+            card.style.display = 'grid';
+          } else {
+            card.style.display = 'none';
+          }
+        });
       });
     });
 
-    // Adiciona a classe 'ativo' ao primeiro span ao iniciar a página
-    var primeiroElemento = elementosPortfolio[0];
-    primeiroElemento.classList.add('ativo');
+    // Ativa o filtro "front-end" ao iniciar a página
+    filtros[0].click();
   });
 }

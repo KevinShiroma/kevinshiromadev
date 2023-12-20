@@ -1,5 +1,4 @@
 /* texto dinamico */
-
 .texto-dinamico {
   font-size: 2rem;
   position: relative;
@@ -50,49 +49,50 @@
 .intro-nome {
   color: var(--cinza);
   font-size: 1.3rem;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   display: block;
 }
 
-/* titulo-cargo */
-.intro-desc h1 {
-  position: relative;
-  position: relative;
-  z-index: 100;
-}
-
-.intro-desc h1::before {
-  content: url("../img/decor-intro-h1.svg");
-  position: absolute;
-  z-index: -1;
-  top: -15px;
-  left: -15px;
-}
-
 /* Localização */
-
+.intro-desc p{
+  margin-bottom: 25px;
+}
 
 /* botão */
 .intro-desc a {
   padding: 12px 24px;
-  border-radius: 20px;
+  border-radius: 5px;
   background: var(--primaria1);
+  font-weight: bold;
   color: var(--black);
   display: inline-block;
   margin-left: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   font-size: 1.3rem;
   transition: 0.3s;
+  text-align: center;
+  vertical-align: middle;
 }
 
+.botao-intro{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding-bottom: 10px;
+  vertical-align: middle;
+}
+
+
 .intro-desc a:hover {
-  background-color: var(--primaria2);
+  background-color: var(--primaria4);
+  vertical-align: middle;
 }
 
 .intro-desc img {
   display: inline-block;
-  margin-top: 10px;
+  vertical-align: middle; /* Alinha a imagem verticalmente */
   margin-left: 12px;
+  
 }
 
 
@@ -141,6 +141,7 @@
   --b: 6px;   /* border thickness */
   --w: 427px; /* width of the image */
   --c: var(--contraste);
+  border-radius: 5px;
   
   width: var(--w);
   aspect-ratio: 1;
@@ -203,7 +204,6 @@
     content: "";
     width: 4px;
     height: 15px;
-    background-color: #29b12e;
     display: inline-block;
     position: absolute;
     z-index: -1;
@@ -219,7 +219,6 @@
     font-size: 1rem;
     padding: 8px 16px;
     border-radius: 5px;
-    background: var(--primaria1);
     color: var(--black);
     display: inline-block;
     margin-left: 0px;
@@ -227,9 +226,7 @@
   }
 
   .intro-desc img {
-    display: inline-block;
-    margin-top: 10px;
-    margin-left: 12px;
+    align-self: center;
     width: 15px;
   }
   

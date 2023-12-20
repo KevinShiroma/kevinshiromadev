@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Nunito&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
   <meta name="author" content="Kevin Shiroma">
-  <meta name="description" content="Site de um desenvolvedor WEB e UX e UI designer">
+  <meta name="description" content="Um site sobre um apaixonado pela tecnologia">
   <meta name="keywords" content="html, css, javascript, fullstack, design, ui, ux">
   <title>Kevin Shiroma</title>
 </head>
@@ -23,7 +23,7 @@
         <li><a href="index.html">Início</a></li>
         <li><a href="sobre.html">Sobre mim</a></li>
         <li><a href="#servicos">Serviços</a></li>
-        <li class="botao-header"><a href="https://drive.google.com/file/d/10R6NQBLW5xtLXGvpHbtTI9EYiq0M8CkM/view?usp=sharing">Currículo</a></li>
+        <li><a class="botao-header no-after" href="https://drive.google.com/file/d/10R6NQBLW5xtLXGvpHbtTI9EYiq0M8CkM/view?usp=sharing">Currículo</a></li>
       </ul>
     </nav>
   </header>
@@ -37,7 +37,7 @@
           <div class="texto-dinamico" id="textoDinamico"></div>
         </div>
         <!-- <h1>Desenvolvedor Front End & UX/UI Designer</h1> -->
-        <p>📍 Localizado em São Paulo - SP </p>
+        <p class="">📍 São Paulo - SP </p>
         <p> Apaixonado pela tecnologia, desenvolvedor de sites por hobby e Analista de dados como profissão. </p>
         <a class="botao-intro" href="https://wa.me//5511911171995?text=Olá,%20vim%20do%20seu%20site!">Contate-me <img src="./img/flecha-btn.svg" alt="flecha"></a>
         <div class="intro-tech">
@@ -71,8 +71,8 @@
         <h3>Um desenvolvedor web que ama viajar e cozinhar</h3>
         <p>Meu nome é Kevin Shiroma, sou nascido e criado em São Paulo. </p>
         <p>Em 2020 decidi ir morar no Japão para aprender mais sobre a minha cultura e o idioma do país. Ao mesmo tempo comecei a estudar sobre a área de TI, que foi onde me encontrei.</p>
-        <p>Em 2023 voltei ao Brasil e iniciei meus estudos em Análise e Desenvolvimento de Sistemas e desde então venho me apaixonando cada vez mais pela área.</p>
-        <a class="sobre-historia" href="historia.html">Minha História <img src="./img/flecha-btn.svg" alt=""></a>
+        <p>Em 2022 voltei ao Brasil e iniciei meus estudos em Análise e Desenvolvimento de Sistemas e desde então venho me apaixonando cada vez mais pela área.</p>
+        <a class="sobre-historia" href="sobre.html">Minha História <img src="./img/flecha-btn.svg" alt=""></a>
       </div>
     </div>
   </section>
@@ -84,22 +84,22 @@
       <div class="servicos-web caixa">
         <img class="img-icones" src="./img/front.svg" alt="">
         <h3>Desenvolvimento Front-end</h3>
-        <p>Criação de sites, desde sua prototipação, até a programação</p>
-        <a href="#">Como funciona? <img src="./img/flecha-btn.svg" alt=""></a>
+        <p>Programação da interface visual de um site e sua interação com o usuário.</p>
+        <a href="web.html">Como funciona? <img src="./img/flecha-btn.svg" alt=""></a>
       </div> <!--servicos-proatividade caixa-->
 
       <div class="servicos-ui caixa">
         <img class="img-icones" src="./img/ux.svg" alt="">
         <h3>UX/UI Design</h3>
-        <p>Já possui um site mas acha que o design não está no seu agrado?</p>
-        <a href="#">Como funciona? <img src="./img/flecha-btn.svg" alt=""></a>
+        <p>Como criar um site ou app que forneça a melhor experiência ao seu cliente.</p>
+        <a href="ux.html">Como funciona? <img src="./img/flecha-btn.svg" alt=""></a>
       </div> <!--diferencial-escuta caixa-->
 
       <div class="servicos-app caixa">
         <img class="img-icones" src="./img/dados.svg" alt="">
         <h3>Análise de Dados</h3>
-        <p>Hoje em dia é preciso pensar primeiro no acesso do cliente através do celular</p>
-        <a href="#">Como funciona? <img src="./img/flecha-btn.svg" alt=""></a>
+        <p>A arte de transformar dados em conhecimentos e insights relevantes.</p>
+        <a href="dados.html">Como funciona? <img src="./img/flecha-btn.svg" alt=""></a>
       </div> <!--  servicos-app caixa -->
     </div> <!--  servicos-itens  -->
   </section>
@@ -109,11 +109,61 @@
     <div class="titulo-portfolio">
       <h2>PORTFÓLIO</h2>
       <div class="servicos-portfolio">
-        <span class="portfolio-front" id="front-end">FRONT-END</span>
-        <span class="portfolio-ux" id="ux-design">UX/UI DESIGN</span>
-        <span class="portfolio-dados" id="dados">ANÁLISE DE DADOS</span>
+        <span class="filtro" data-filter="front-end">FRONT-END</span>
+        <span class="filtro" data-filter="ux-design">UX/UI DESIGN</span>
+        <span class="filtro" data-filter="dados">ANÁLISE DE DADOS</span>
       </div>
     </div>
+
+    <!-- EduFECAP -->
+    <div class="card-portfolio ux-design">
+      <img class="img-portfolio" src="./img/miniaturas/edufecap.jpg" alt="">
+      <div class="card-texto">
+        <h3>EduFECAP</h3>
+        <p>O EduFECAP é um projeto criado para a criação de um app para alunos da FECAP (Fundação Escola de Comércio Álvares Penteado) com foco na melhor experiência de usabilidade.</p>
+        <div class="portfolio-tech">
+          <span class="card-tech">UX</span>
+          <span class="card-tech">UI</span>
+          <span class="card-tech">Figma</span>
+        </div>
+        <div class="portfolio-grupo-link">
+          <div class="portfolio-link">
+            <a href=https://drive.google.com/file/d/1ZBi8HDTqtmMESs7LFYbVdQjJcAw4NTSZ/view?usp=sharing>Ver ao vivo</a>
+            <img src="./img/external-link.svg" alt="">
+          </div>
+          <div class="portfolio-link">
+            <a href="https://www.figma.com/file/9NT3TuTCx4pf5zY5qm7aSR/FECAP-APP?type=design&node-id=83%3A797&mode=design&t=2znpPvwFwwEbRzMY-1">Ver Protótipo</a>
+            <img src="./img/monitor.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- meu onibus app -->
+    <div class="card-portfolio ux-design">
+      <img class="img-portfolio" src="./img//miniaturas/meuonibus.jpg" alt="">
+      <div class="card-texto">
+        <h3>MeuÔnibus APP</h3>
+        <p>O app MeuÔnibus nasceu na necessidade das pessoas de voltarem para casa no conforto depois de um longo dia de trabalho, com isso foi criado um protótipo de um app com foco na experiência do usuário. </p>
+        <div class="portfolio-tech">
+          <span class="card-tech">UX</span>
+          <span class="card-tech">UI</span>
+          <span class="card-tech">Figma</span>
+        </div>
+        <div class="portfolio-grupo-link">
+          <div class="portfolio-link">
+            <a href="https://drive.google.com/file/d/1gRrEyzsmygfLp_EfKjiARyNgDln23fI6/view?usp=sharing">Ver ao vivo</a>
+            <img src="./img/external-link.svg" alt="">
+          </div>
+          <div class="portfolio-link">
+            <a href="https://www.figma.com/file/TdPKJcXFCJgck0r9MwfmLc/Google-UX?type=design&node-id=58%3A70&mode=design&t=st1PSOKGjYWcUssF-1">Ver Protótipo</a>
+            <img src="./img/monitor.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 
     <!-- Mercia -->
     <div class="card-portfolio ux-design front-end">
@@ -177,7 +227,7 @@
       <div class="card-texto">
         <h3>Bikcraft</h3>
         <p>
-          Site para vendas de bicicletas de luxo e de seguros para as bicicletas </p>
+          Site para vendas de bicicletas de luxo e de seguros para as bicicletas, com site prototipado e programado. </p>
         <div class="portfolio-tech">
           <span class="card-tech">UX</span>
           <span class="card-tech">UI</span>
@@ -199,61 +249,36 @@
       </div>
     </div>
 
-    <!-- meu onibus app -->
-    <div class="card-portfolio ux-design">
-      <img class="img-portfolio" src="./img//miniaturas/meuonibus.jpg" alt="">
-      <div class="card-texto">
-        <h3>MeuÔnibus APP</h3>
-        <p>O app MeuÔnibus nasceu na necessidade das pessoas de voltarem para casa no conforto depois de um longo dia de trabalho </p>
-        <div class="portfolio-tech">
-          <span class="card-tech">UX</span>
-          <span class="card-tech">UI</span>
-          <span class="card-tech">Figma</span>
-        </div>
-        <div class="portfolio-grupo-link">
-          <div class="portfolio-link">
-            <a href="https://drive.google.com/file/d/1gRrEyzsmygfLp_EfKjiARyNgDln23fI6/view?usp=sharing">Ver ao vivo</a>
-            <img src="./img/external-link.svg" alt="">
-          </div>
-          <div class="portfolio-link">
-            <a href="https://www.figma.com/file/TdPKJcXFCJgck0r9MwfmLc/Google-UX?type=design&node-id=58%3A70&mode=design&t=st1PSOKGjYWcUssF-1">Ver Protótipo</a>
-            <img src="./img/monitor.svg" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- EduFECAP -->
-    <div class="card-portfolio ux-design">
-      <img class="img-portfolio" src="./img/miniaturas/edufecap.jpg" alt="">
-      <div class="card-texto">
-        <h3>EduFECAP</h3>
-        <p>O EduFECAP é um projeto criado para a criação de um app para alunos da FECAP (Fundação Escola de Comércio Álvares Penteado) com foco na melhor experiência de usabilidade.</p>
-        <div class="portfolio-tech">
-          <span class="card-tech">UX</span>
-          <span class="card-tech">UI</span>
-          <span class="card-tech">Figma</span>
-        </div>
-        <div class="portfolio-grupo-link">
-          <div class="portfolio-link">
-            <a href=https://drive.google.com/file/d/1ZBi8HDTqtmMESs7LFYbVdQjJcAw4NTSZ/view?usp=sharing>Ver ao vivo</a>
-            <img src="./img/external-link.svg" alt="">
-          </div>
-          <div class="portfolio-link">
-            <a href="https://www.figma.com/file/9NT3TuTCx4pf5zY5qm7aSR/FECAP-APP?type=design&node-id=83%3A797&mode=design&t=2znpPvwFwwEbRzMY-1">Ver Protótipo</a>
-            <img src="./img/monitor.svg" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
 
 
   </section>
 
 
-  <footer class=" footer container">
-    <p>Kevin Shiroma © Todos os direitos reservados</p>
+  <footer class="footer-bg">
+    <div class="footer container">
+      <div class="footer-img">
+        <a href="index.html"><img src="./img/logo-footer.svg" alt=""> </a>
+      </div> <!--footer-img-->
+      <div class="footer-redes">
+        <h1>CONTATO</h1>
+        <div class="footer-icons">
+          <a href="https://www.linkedin.com/in/kevinmakotos/"><img src="./img/linkedin-footer.svg" alt=""></a>
+          <a href="https://github.com/KevinShiroma"><img src="./img/github-footer.svg" alt=""></a>
+        </div>
+      </div> <!--footer-redes-->
+      <div class="footer-info">
+        <h1>INFORMAÇÕES</h1>
+        <ul class="footer-nav">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="termos.html">Termos e Condições</a></li>
+          <li><a href="privacidade.html">Política de Privacidade</a></li>
+        </ul>
+      </div> <!--footer-info-->
+      <span class="footer-direitos">Kevin Shiroma © Todos os direitos reservados</span>
+    </div> <!--footer container-->
   </footer>
+
 
   <script type="module" src="./js/script.js"></script>
 

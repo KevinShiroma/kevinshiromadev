@@ -1,14 +1,15 @@
 :root{
-  --primaria1: #47E14C;
-  --primaria2: #95D754;
-  --primaria3: #EEF296;
-  --primaria4: #006021;
-  --contraste: #FF8F8F;
+  --primaria1: #57C550;
+  --primaria4: #30A529;
+  --verde-escuro: #004217;
+  --contraste: #FF7262;
 
-  --black: #121212;
+  --black: #191E23;
   --white: #ffffff;
+  --verde-fraco: #C0F1E3;
   --cinza: #9c9c9c;
-  --fundo: #F7F7F7
+  --fundo: #F7F7F7;
+  --neutro: #0e1013;
 }
 
 * {
@@ -88,6 +89,32 @@ h2::before {
   margin-right: 16px;
   margin-bottom: 4px;
   
+}
+
+.button{
+  padding: 12px 24px;
+  border-radius: 5px;
+  background: var(--primaria1);
+  font-weight: bold;
+  color: var(--black);
+  display: inline-block;
+  margin-left: 0px;
+  margin-bottom: 30px;
+  font-size: 1.3rem;
+  transition: 0.3s;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.button:hover{
+  background-color: var(--primaria4);
+  vertical-align: middle;
+}
+
+.button img{
+  display: inline-block;
+  vertical-align: middle; /* Alinha a imagem verticalmente */
+  margin-left: 12px;
 }
 
 /* .js-scroll {

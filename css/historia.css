@@ -1,0 +1,57 @@
+.historia{
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  margin-top: 60px;
+  gap: 20px;
+}
+
+.historia-foto{
+  width: 240px;
+  margin-bottom: 30px;
+}
+
+.historia-texto h1:after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--primaria1);
+  margin-bottom: 30px;
+}
+
+.historia p{
+  margin-bottom: 30px;
+}
+
+.historia-redes{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.historia-redes img{
+  max-width: 45px;
+}
+
+.historia-texto img{
+  border-radius: 5px;
+}
+
+.legenda-photo{
+  font-family: Arial;
+  font-size: 0.85rem;
+}
+
+
+
+@media (max-width:700px){
+  .historia{
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin-top: 0px
+  }
+
+  .historia-texto h1{
+    font-family: 1.65rem;
+  }
+}

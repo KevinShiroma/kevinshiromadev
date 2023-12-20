@@ -4,4 +4,7 @@
 @import './intro.css';
 @import './sobre.css';
 @import './servicos.css';
-@import './portfolio.css'
+@import './portfolio.css';
+@import './footer.css';
+
+@import './historia.css';

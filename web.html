@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <meta name="author" content="Kevin Shiroma">
+  <meta name="description" content="Um site sobre um apaixonado pela tecnologia">
+  <meta name="keywords" content="html, css, javascript, fullstack, design, ui, ux">
+  <title>Kevin Shiroma</title>
+</head>
+
+<body>
+  <header>
+    <nav class="nav container">
+      <a href="index.html"><img src="./img/logo.svg" alt="logotipo"></a>
+      <button class="hamburguer" data-menu="button" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul class="menu-nav" data-menu="lista" id="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre mim</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a class="botao-header no-after" href="https://drive.google.com/file/d/10R6NQBLW5xtLXGvpHbtTI9EYiq0M8CkM/view?usp=sharing">Currículo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main class="container historia">
+    <div>
+      <img class="historia-foto" src="./img/fotos/foto1.jpg" alt="">
+      <p>Um apaixonado pela tecnologia, amo praticar exercícios físicos e aspirante a cozinheiro.</p>
+      <div class="historia-redes">
+        <a href="https://www.linkedin.com/in/kevinmakotos/"><img src="./img/linkedin-hist.svg" alt=""></a>
+        <a href="https://github.com/KevinShiroma"><img src="./img/github-hist.svg" alt=""></a>
+      </div>
+      <a class="button" href="https://wa.me//5511911171995?text=Olá,%20vim%20do%20seu%20site!">Contate-me <img src="./img/flecha-btn.svg" alt="flecha"></a>
+    </div>
+
+
+    <div class="historia-texto">
+      <h1>Web Design</h1>
+      <p>Web Design é o processo de criar e projetar sites na internet. Quando você acessa um site, como uma página da web de notícias, uma loja online ou até mesmo um blog, o que você vê foi cuidadosamente criado por um Web Designer.</p>
+      <p>Pense em um site como uma casa. </p>
+      <p>Eu serei como um arquiteto que decide como a casa vai parecer por fora e por dentro. Eu escolherei as cores, fontes, imagens, layout e organizarei o conteúdo de forma que seja fácil de navegar e entender.</p>
+      <img src="./img/fotos/web-photo.jpg" alt="">
+      <span>Código para desenvolvimento front-end</span> <br><br>
+
+      <p>Também me certificarei de que o site funcione bem em computadores, tablets e celulares, para que as pessoas possam acessá-lo de qualquer lugar.</p>
+      <p>Além disso, os Web Designers também se preocupam com a usabilidade, o que significa tornar o site fácil de usar. </p>
+      <p>Em resumo, o Web Design é como a arquitetura e o visual de uma casa, mas aplicado a sites na internet. </p>
+      <p>É o processo de tornar os sites bonitos, funcionais e fáceis de usar para que as pessoas possam navegar e interagir com eles de forma eficiente.</p>
+    </div>
+  </main>
+
+  <!--  Meus serviços  -->
+  <section class="servicos container" id="servicos">
+    <h2>MEUS SERVIÇOS</h2>
+    <div class="servicos-itens" style="grid-template-columns: 1fr 1fr;">
+      <div class="servicos-ui caixa">
+        <img class="img-icones" src="./img/ux.svg" alt="">
+        <h3>UX/UI Design</h3>
+        <p>Como criar um site ou app que forneça a melhor experiência ao seu cliente.</p>
+        <a href="ux.html">Como funciona? <img src="./img/flecha-btn.svg" alt=""></a>
+      </div> <!--diferencial-escuta caixa-->
+
+      <div class="servicos-app caixa">
+        <img class="img-icones" src="./img/dados.svg" alt="">
+        <h3>Análise de Dados</h3>
+        <p>A arte de transformar dados em conhecimentos e insights relevantes.</p>
+        <a href="dados.html">Como funciona? <img src="./img/flecha-btn.svg" alt=""></a>
+      </div> <!--  servicos-app caixa -->
+    </div> <!--  servicos-itens  -->
+  </section>
+
+
+  <footer class="footer-bg">
+    <div class="footer container">
+      <div class="footer-img">
+        <a href="index.html"><img src="./img/logo-footer.svg" alt=""> </a>
+      </div> <!--footer-img-->
+      <div class="footer-redes">
+        <h1>CONTATO</h1>
+        <div class="footer-icons">
+          <a href="https://www.linkedin.com/in/kevinmakotos/"><img src="./img/linkedin-footer.svg" alt=""></a>
+          <a href="https://github.com/KevinShiroma"><img src="./img/github-footer.svg" alt=""></a>
+        </div>
+      </div> <!--footer-redes-->
+      <div class="footer-info">
+        <h1>INFORMAÇÕES</h1>
+        <ul class="footer-nav">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="termos.html">Termos e Condições</a></li>
+          <li><a href="privacidade.html">Política de Privacidade</a></li>
+        </ul>
+      </div> <!--footer-info-->
+      <span class="footer-direitos">Kevin Shiroma © Todos os direitos reservados</span>
+    </div> <!--footer container-->
+  </footer>
+
+
+  <script type="module" src="./js/script.js"></script>
+
+</body>
+
+</html>

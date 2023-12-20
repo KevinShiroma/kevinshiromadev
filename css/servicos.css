@@ -28,7 +28,7 @@
   text-align: center;
 }
 
-.servicos a, img{
+.servicos a, .servicos img{
   display: inline-block;
   margin-left: 10px;
   font-size: 1.3rem;
