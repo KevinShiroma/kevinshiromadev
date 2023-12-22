@@ -20,6 +20,10 @@
   object-fit: cover;
 }
 
+.sobre-desc h2 {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
 
 .sobre-desc p {
   max-width: 38ch;
@@ -62,7 +66,15 @@
   }
 }
 
+.ultimo-paragrafo-sobre{
+  margin-bottom: 60px;
+}
+
 @media (max-width: 769px) {
+  .sobre-bg {
+    box-shadow: none;
+  }
+
   .sobre {
     grid-template-columns: 1fr;
     margin-top: 60px;

@@ -33,6 +33,7 @@
   height: 80px;
   width: 300px;
   text-align: left; /* Alinhamento do texto à esquerda */
+  margin-bottom: 20px;
 }
 
 /* texto dinamico */
@@ -49,7 +50,7 @@
 .intro-nome {
   color: var(--cinza);
   font-size: 1.3rem;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   display: block;
 }
 
@@ -80,6 +81,7 @@
   align-items: center;
   padding-bottom: 10px;
   vertical-align: middle;
+  margin-bottom: 25px;
 }
 
 
@@ -185,6 +187,9 @@
 }
 
 @media (max-width: 480px) {
+  .intro {
+    gap: 30px;
+  }
   .intro-nome {
     font-size: 1.25rem;
   }
