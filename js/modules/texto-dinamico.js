@@ -1,8 +1,9 @@
 export default function initTextoDinamico() {
   const textos = [
-    'Desenvolvedor Front End 👨‍💻',
-    'UX/UI Designer 🖌️',
-    'Analista de Dados 🎲',
+    'Engenheiro de Dados 👷🎲',
+    'Desenvolvedor de sites 💻',
+    'Aspirante a Cozinheiro 👨‍🍳',
+    'Corredor 🏃‍♂️ '
   ];
   let indiceTextoAtual = 0;
 
@@ -11,7 +12,7 @@ export default function initTextoDinamico() {
     elementoTexto.textContent = '';
 
     const textoAtual = textos[indiceTextoAtual];
-    const intervaloDigitacao = 50; // Ajuste conforme necessário
+    const intervaloDigitacao = 30; // Ajuste conforme necessário
 
     let i = 0;
 
@@ -20,7 +21,7 @@ export default function initTextoDinamico() {
       i++;
 
       if (i === textoAtual.length) {
-        setTimeout(apagarTexto, 2500);
+        setTimeout(apagarTexto, 2000);
       } else {
         setTimeout(adicionarCaractere, intervaloDigitacao);
       }
