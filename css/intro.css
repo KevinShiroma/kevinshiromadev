@@ -101,7 +101,7 @@
 /* stacks */
 .intro-tech {
   font-size: 1.5rem;
-  display: flex;
+  display: block;
   align-items: center;
   max-width: 100%;
 }
@@ -116,18 +116,67 @@
   display: flex;
   flex-wrap: wrap; /* Add this line */
   transition: 0.5s;
-  gap: 5px
+  gap: 5px;
+  position: relative;
+}
+
+.image-container {
+  position: relative; /* Necessário para posicionar o tooltip */
+  display: inline-block; /* Permite que o contêiner se ajuste ao tamanho da imagem */
+}
+
+.image-container img {
+  max-width: 100%; /* Ajusta a imagem para não ultrapassar o contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+.tooltip {
+  visibility: hidden; /* Inicialmente escondido */
+  font-weight: normal;
+  width: auto; /* Largura do tooltip */
+  background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo do tooltip */
+  color: #fff; /* Cor do texto */
+  text-align: center; /* Centraliza o texto */
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: 10px; /* Espaçamento interno */
+  position: absolute; /* Posiciona o tooltip em relação ao contêiner */
+  bottom: 125%; /* Posiciona acima da imagem */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta a posição para centralizar */
+  opacity: 0; /* Inicialmente invisível */
+  transition: opacity 0.3s; /* Transição suave */
+
+}
+
+.image-container:hover .tooltip {
+  visibility: visible; /* Torna visível ao passar o mouse */
+  opacity: 1; /* Torna opaco ao passar o mouse */
 }
 
 .intro-tech-techs img {
   transition: 0.5s;
   max-width: 50px;
-
-  
 }
 
 .intro-tech-techs img:hover {
   opacity: 0.5;
+}
+
+.certificados{
+  padding: 20px;
+  background-color: #A4D7E1;
+  margin-top: 60px;
+}
+
+.cert-img{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cert-img img{
+  display: flex;
+  width: 160px;
 }
 
 /* imagem */
@@ -183,6 +232,11 @@
 
   .intro-img {
     justify-content: center;
+  }
+
+  .cert-img img{
+    display: flex;
+    width: 100px;
   }
 }
 
@@ -255,5 +309,20 @@
   .intro-img img {
     height: 250px;
     width: 250px;
+  }
+
+  .container .cert-img img{
+    display: flex;
+    width: 80px;
+    padding: 0pauto30px;
+  }
+
+  .certificados{
+    padding: 10px;
+  }
+
+  .certificados .container {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }

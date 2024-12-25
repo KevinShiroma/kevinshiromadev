@@ -1,7 +1,7 @@
 export default function initTextoDinamico() {
   const textos = [
     'Engenheiro de Dados 👷🎲',
-    'Desenvolvedor de sites 💻',
+    'Web Developer 💻',
     'Aspirante a Cozinheiro 👨‍🍳',
     'Corredor 🏃‍♂️ '
   ];
