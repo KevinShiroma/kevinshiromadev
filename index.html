@@ -105,10 +105,20 @@
   </main>
   
   <div class="certificados">
-    <div class="cert-img container">
-      <img src="./img/az900.png" alt="">
-      <img src="./img/dp900.png" alt="">
-      <img src="./img/ai900.png" alt="">
+    <div class="container">
+      <h2>CERTIFICAÇÕES</h2>
+        <div  class="cert-img">
+          <div>
+            <img src="./img/az900.png" alt="">
+          </div>
+          <div>
+            <img src="./img/dp900.png" alt="">
+          </div>
+          <div>
+            <img src="./img/ai900.png" alt="">
+          </div>
+          
+      </div>
     </div>
   </div>
   <!--  Sobre mim  -->
@@ -133,6 +143,13 @@
   <section class="servicos container" id="servicos">
     <h2>MEUS SERVIÇOS</h2>
     <div class="servicos-itens">
+      <div class="servicos-app caixa">
+        <img class="img-icones" src="./img/dados.svg" alt="">
+        <h3>Engenharia de Dados</h3>
+        <p>É a arte de criar pipelines que coletam e processam dados para gerar insights valiosos.</p>
+        <a href="dados.html">Como funciona? <img src="./img/flecha-btn.svg" alt=""></a>
+      </div> <!--  servicos-app caixa -->
+      
       <div class="servicos-web caixa">
         <img class="img-icones" src="./img/front.svg" alt="">
         <h3>Desenvolvimento Front-end</h3>
@@ -147,12 +164,7 @@
         <a href="ux.html">Como funciona? <img src="./img/flecha-btn.svg" alt=""></a>
       </div> <!--diferencial-escuta caixa-->
 
-      <div class="servicos-app caixa">
-        <img class="img-icones" src="./img/dados.svg" alt="">
-        <h3>Engenharia de Dados</h3>
-        <p>É a arte de construir pipelines que coletam e processam dados para gerar insights valiosos.</p>
-        <a href="dados.html">Como funciona? <img src="./img/flecha-btn.svg" alt=""></a>
-      </div> <!--  servicos-app caixa -->
+      
     </div> <!--  servicos-itens  -->
   </section>
 
@@ -161,9 +173,9 @@
     <div class="titulo-portfolio">
       <h2>PORTFÓLIO</h2>
       <div class="servicos-portfolio">
+        <span class="filtro" data-filter="dados">ENGENHARIA DE DADOS</span>
         <span class="filtro" data-filter="front-end">FRONT-END</span>
         <span class="filtro" data-filter="ux-design">UX/UI DESIGN</span>
-        <span class="filtro" data-filter="dados">ENGENHARIA DE DADOS</span>
       </div>
     </div>
 
