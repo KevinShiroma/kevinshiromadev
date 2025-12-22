@@ -163,20 +163,28 @@
 }
 
 .certificados{
-  padding: 20px;
-  background-color: #A4D7E1;
+  padding: 10px;
+  background-color: #ffffff;
   margin-top: 60px;
   height: auto;
 }
 
 .certificados h2{
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .cert-img{
   display: flex;
+  gap: 15px;
   justify-content: space-around;
+  flex-wrap: wrap;
+  /* justify-content: center; */
   align-items: center;
+}
+
+.cert-img div img {
+  max-width: 150px; /* controla tamanho das imagens */
+  height: auto;
 }
 
 .cert-img img{
@@ -247,6 +255,15 @@
   .cert-img img{
     display: flex;
     width: 100px;
+  }
+
+  .cert-img {
+   /* flex-direction: column;  força empilhar */
+    align-items: center;    /* centraliza verticalmente */
+  }
+
+  .cert-img div {
+    margin-bottom: 15px; /* espaço entre imagens */
   }
 }
 
