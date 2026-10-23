@@ -4,401 +4,654 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin Shiroma - Engenheiro de Dados e IA</title>
+  <meta name="description"
+    content="Portfólio de Kevin Shiroma - Projetos em Engenharia de Dados, Inteligência Artificial, Databricks, Azure e Desenvolvimento Web.">
+  <meta name="keywords"
+    content="Engenharia de Dados, Inteligência Artificial, Databricks, PySpark, Azure Cloud, Power BI, SQL, Python, Kevin Shiroma, Portfólio">
+  <meta name="author" content="Kevin Shiroma">
+
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kevin Shiroma - Engenheiro de Dados e IA">
+  <meta property="og:description"
+    content="Projetos em Engenharia de Dados, Inteligência Artificial, Databricks, PySpark, Azure e Desenvolvimento Web.">
+  <meta property="og:image" content="./img/perfil.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" href="./img/dado.svg" type="image/svg+xml">
+
+  <!-- Google Fonts otimizadas -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Estilos CSS -->
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="icon" href="./img/dado.svg" type="image/x-icon">
-  <meta name="author" content="Kevin Shiroma">
-  <meta name="description" content="Um site sobre um apaixonado pela tecnologia">
-  <meta name="keywords" content="html, css, javascript, fullstack, design, ui, ux">
-  <title>Kevin Shiroma - Engenheiro de Dados</title>
 </head>
 
 <body>
+  <!-- Header de Navegação -->
   <header>
-    <nav class="nav container">
-      <a href="index.html"><img src="./img/logo.svg" alt="logotipo"></a>
-      <button class="hamburguer" data-menu="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav class="nav container" aria-label="Navegação principal">
+      <a class="nav-brand" href="index.html" aria-label="Página inicial Kevin Shiroma">
+        <img src="./img/logo.svg" alt="Logotipo Kevin Shiroma Dev">
+      </a>
+
+      <button class="hamburguer" data-menu="button" aria-expanded="false" aria-controls="menu"
+        aria-label="Abrir menu de navegação">
+        <div class="hamburguer-icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <span>Menu</span>
+      </button>
+
       <ul class="menu-nav" data-menu="lista" id="menu">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="sobre.html">Sobre mim</a></li>
-        <li><a class="botao-header no-after" href="https://drive.google.com/file/d/1LDyow-Wspbo_ozMTWDgXmIkMMpSU-lhy/view?usp=sharing" target="_blank">Currículo</a></li>
+        <li><a href="index.html" class="ativo">Início</a></li>
+        <li><a href="#experiencia">Experiência</a></li>
+        <li><a href="#educacao">Educação</a></li>
+        <li><a href="#certificacoes">Certificações</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a class="botao-header" href="./curriculo-kevin-engenheiro de dados.pdf" target="_blank"
+            rel="noopener noreferrer">📄 Currículo</a></li>
       </ul>
     </nav>
   </header>
 
-  <!--  introdução -->
+  <!-- Hero / Introdução Principal -->
   <main class="main-bg">
-    <div class="intro container" id="intro">
+    <section class="intro container" id="intro">
       <div class="intro-desc">
-        <span class="intro-nome">Olá!! meu nome é Kevin e sou</span>
+        <div class="intro-status">
+          <!-- <span class="badge">
+            <span class="badge-dot" aria-hidden="true"></span>
+            Disponível para Projetos & Desafios
+          </span> -->
+        </div>
+
+        <span class="intro-nome">Olá! Meu nome é Kevin Shiroma e sou</span>
+
         <div class="container-texto-dinamico">
           <div class="texto-dinamico" id="textoDinamico"></div>
         </div>
-        <!-- <h1>Desenvolvedor Front End & UX/UI Designer</h1> -->
-        <p class="">📍 São Paulo - SP </p>
-        <p> Apaixonado pela tecnologia, corredor nas horas vagas e Engenheiro de dados como profissão. </p>
-        <a class="botao-intro" href="https://wa.me//5511911171995?text=Olá,%20vim%20do%20seu%20site!">Contate-me <img src="./img/flecha-btn.svg" alt="flecha"></a>
+
+        <span class="intro-location">📍 São Paulo - SP</span>
+
+        <p class="intro-bio">
+          Sou Engenheiro de Dados e IA, criando pipelines de dados escaláveis e soluções de IA, automatizando processos
+          e ganhos de produtividade e tempo.
+        </p>
+
+        <div class="intro-acoes">
+          <a class="button" href="https://wa.me/5511911171995?text=Ol%C3%A1%2C%20vim%20do%20seu%20site!" target="_blank"
+            rel="noopener noreferrer">
+            Fale Comigo <img src="./img/flecha-btn.svg" alt="" aria-hidden="true">
+          </a>
+          <a class="button button-secondary" href="#experiencia">
+            Ver Experiência
+          </a>
+        </div>
+
+        <!-- Tech Stack -->
         <div class="intro-tech">
-          <span>Tech Stack </span>
-            <div class="intro-tech-techs">
-
-              <div class="image-container">
-                <img src="./img/pyspark.png" alt="pyspark">
-                <span class="tooltip">Pyspark</span>
+          <div class="intro-tech-header">
+            <span>Tech Stack & Ferramentas</span>
+            <!-- <span class="intro-tech-count">11 Principais</span> -->
+          </div>
+          <div class="intro-tech-techs" role="list">
+            <div class="image-container" role="listitem">
+              <img src="./img/tech/pyspark.png" alt="Apache PySpark">
+              <span class="tooltip">PySpark</span>
             </div>
-
-            <div class="image-container">
-                <img src="./img/python.jpg" alt="Python">
-                <span class="tooltip">Python</span>
+            <div class="image-container" role="listitem">
+              <img src="./img/tech/python.jpg" alt="Linguagem Python">
+              <span class="tooltip">Python</span>
             </div>
-
-            <div class="image-container">
-                <img src="./img/C.jpg" alt="C">
-                <span class="tooltip">C#</span>
+            <div class="image-container" role="listitem">
+              <img src="./img/tech/databricks.png" alt="Databricks Lakehouse">
+              <span class="tooltip">Databricks</span>
             </div>
-            
-            <div class="image-container">
-                <img src="./img/sql.jpg" alt="SQL">
-                <span class="tooltip">SQL</span>
-            </div>      
-            
-            <div class="image-container">
-                <img src="./img/pwbi.png" alt="Power BI">
-                <span class="tooltip">Power BI</span>
+            <div class="image-container" role="listitem">
+              <img src="./img/tech/sql.jpg" alt="SQL Server e Consultas Relacionais">
+              <span class="tooltip">SQL</span>
             </div>
-            
-            <div class="image-container">
-                <img src="./img/azure.png" alt="Azure">
-                <span class="tooltip">Azure Cloud</span>
+            <div class="image-container" role="listitem">
+              <img src="./img/tech/azure.png" alt="Microsoft Azure Cloud">
+              <span class="tooltip">Azure Cloud</span>
             </div>
-            
-            <div class="image-container">
-                <img src="./img/databricks.png" alt="Databricks">
-                <span class="tooltip">Databricks</span>
+            <div class="image-container" role="listitem">
+              <img src="./img/tech/gcp.png" alt="Google Cloud Platform (GCP)">
+              <span class="tooltip">Google Cloud (GCP)</span>
             </div>
-            
-            <div class="image-container">
-                <img src="./img/adf.png" alt="ADF">
-                <span class="tooltip">Data Factory</span>
+            <div class="image-container" role="listitem">
+              <img src="./img/tech/pwbi.png" alt="Microsoft Power BI">
+              <span class="tooltip">Power BI</span>
             </div>
-
-            
-            <div class="image-container">
-              <img src="./img/ai-foundry.png" alt="Azure AI Foundry">
+            <div class="image-container" role="listitem">
+              <img src="./img/tech/ai-foundry.png" alt="Azure AI Foundry">
               <span class="tooltip">Azure AI Foundry</span>
             </div>
-            
-                        
-            <div class="image-container">
-              <img src="./img/pwr-automate.png" alt="Azure Power Automate">
-              <span class="tooltip">Azure Power Automate</span>
+            <div class="image-container" role="listitem">
+              <img src="./img/tech/pwr-automate.png" alt="Power Automate">
+              <span class="tooltip">Power Automate</span>
             </div>
-
-                        
-            <div class="image-container">
-              <img src="./img/logic-apps.png" alt="Azure Logic Apps">
-              <span class="tooltip">Azure Logic Apps</span>
+            <div class="image-container" role="listitem">
+              <img src="./img/tech/logic-apps.png" alt="Azure Logic Apps">
+              <span class="tooltip">Logic Apps</span>
             </div>
-
-                        
-            <div class="image-container">
-              <img src="./img/az-devops.png" alt="Azure Devops">
-              <span class="tooltip">Azure Devops</span>
+            <div class="image-container" role="listitem">
+              <img src="./img/tech/az-devops.png" alt="Azure DevOps">
+              <span class="tooltip">Azure DevOps</span>
             </div>
-            
-      
-            
           </div>
-        </div> <!--intro-tech-->
+        </div>
       </div>
-      
+
+      <!-- Avatar / Imagem de Perfil -->
       <div class="intro-img">
-        <img src="./img/perfil.jpg" alt="Foto de Kevin Shiroma">
-      </div> <!--intro-img-->
-    </div>
+        <div class="intro-avatar-wrapper">
+          <div class="intro-avatar-halo" aria-hidden="true"></div>
+          <div class="intro-avatar-frame">
+            <img src="./img/perfil.jpg" alt="Foto de Kevin Shiroma sorrindo">
+          </div>
+
+          <!-- Badges flutuantes -->
+          <div class="floating-badge floating-badge-top">
+            <span class="floating-badge-icon">⚡</span>
+            <span>Engenharia de Dados</span>
+          </div>
+
+          <div class="floating-badge floating-badge-bottom">
+            <span class="floating-badge-icon">☁️</span>
+            <span>Azure & Databricks</span>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  
-  <div class="certificados">
+
+  <!-- Seção Certificações -->
+  <section class="certificados" id="certificacoes">
     <div class="container">
-      <h2>CERTIFICAÇÕES</h2>
-        <div  class="cert-img">
-          <div>
-            <a href="https://learn.microsoft.com/api/credentials/share/pt-br/kevinmakotos/AB52E3EAEE28159D?sharingId"><img src="./img/ai-102.png" alt=""></a>
+      <div class="section-header">
+        <h2>CERTIFICAÇÕES</h2>
+        <p class="section-subtitle">Certificações oficiais das principais empresas de tecnologia.</p>
+      </div>
+
+      <div class="cert-grid">
+        <a class="cert-card"
+          href="https://learn.microsoft.com/api/credentials/share/pt-br/kevinmakotos/AB52E3EAEE28159D?sharingId"
+          target="_blank" rel="noopener noreferrer">
+          <div class="cert-card-img">
+            <img src="./img/ai-102.png" alt="Badge AI-102">
           </div>
-          <div>
-            <a href="https://learn.microsoft.com/api/credentials/share/pt-br/kevinmakotos/AB52E3EAEE28159D?sharingId"><img src="./img/db-data-eng-ass.png" alt="" ></a>
+          <div class="cert-card-info">
+            <span class="cert-card-issuer">Microsoft</span>
+            <span class="cert-card-title">Azure AI Engineer Associate (AI-102)</span>
+            <span class="cert-card-link">Verificar credencial</span>
           </div>
-          <div>
-            <a href="https://learn.microsoft.com/api/credentials/share/pt-br/kevinmakotos/E631BEC2B11964F?sharingId"><img src="./img/az900.png" alt=""></a>
+        </a>
+
+        <a class="cert-card"
+          href="https://learn.microsoft.com/api/credentials/share/pt-br/kevinmakotos/AB52E3EAEE28159D?sharingId"
+          target="_blank" rel="noopener noreferrer">
+          <div class="cert-card-img">
+            <img src="./img/db-data-eng-ass.png" alt="Badge Databricks Data Engineer">
           </div>
-          <div>
-            <a href="https://learn.microsoft.com/api/credentials/share/pt-br/kevinmakotos/DFCD7E11A50D439C?sharingId"><img src="./img/dp900.png" alt=""></a>
+          <div class="cert-card-info">
+            <span class="cert-card-issuer">Databricks</span>
+            <span class="cert-card-title">Data Engineer Associate</span>
+            <span class="cert-card-link">Verificar credencial</span>
           </div>
-          <div>
-            <a href="https://learn.microsoft.com/api/credentials/share/pt-br/kevinmakotos/84442D15B9D3459A?sharingId"><img src="./img/ai900.png" alt=""></a>
+        </a>
+
+        <a class="cert-card"
+          href="https://learn.microsoft.com/api/credentials/share/pt-br/kevinmakotos/9FA54436BEDA4383?sharingId=70D0640F54E823E6"
+          target="_blank" rel="noopener noreferrer">
+          <div class="cert-card-img">
+            <img src="./img/dp-700.png" alt="Badge Fabric Data Engineer DP-700">
           </div>
-          <div>
-            <a href="https://www.credly.com/badges/08cf9744-1cdc-4f53-93f5-aa30fe8c1d05"><img src="./img/dig_leader.png" alt=""></a>
+          <div class="cert-card-info">
+            <span class="cert-card-issuer">Microsoft</span>
+            <span class="cert-card-title">Fabric Data Engineer Associate (DP-700)</span>
+            <span class="cert-card-link">Verificar credencial</span>
           </div>
+        </a>
+
+        <a class="cert-card"
+          href="https://learn.microsoft.com/api/credentials/share/pt-br/kevinmakotos/E631BEC2B11964F?sharingId"
+          target="_blank" rel="noopener noreferrer">
+          <div class="cert-card-img">
+            <img src="./img/az900.png" alt="Badge AZ-900">
+          </div>
+          <div class="cert-card-info">
+            <span class="cert-card-issuer">Microsoft</span>
+            <span class="cert-card-title">Azure Fundamentals (AZ-900)</span>
+            <span class="cert-card-link">Verificar credencial</span>
+          </div>
+        </a>
+
+        <a class="cert-card"
+          href="https://learn.microsoft.com/api/credentials/share/pt-br/kevinmakotos/DFCD7E11A50D439C?sharingId"
+          target="_blank" rel="noopener noreferrer">
+          <div class="cert-card-img">
+            <img src="./img/dp900.png" alt="Badge DP-900">
+          </div>
+          <div class="cert-card-info">
+            <span class="cert-card-issuer">Microsoft</span>
+            <span class="cert-card-title">Azure Data Fundamentals (DP-900)</span>
+            <span class="cert-card-link">Verificar credencial</span>
+          </div>
+        </a>
+
+        <a class="cert-card"
+          href="https://learn.microsoft.com/api/credentials/share/pt-br/kevinmakotos/84442D15B9D3459A?sharingId"
+          target="_blank" rel="noopener noreferrer">
+          <div class="cert-card-img">
+            <img src="./img/ai900.png" alt="Badge AI-900">
+          </div>
+          <div class="cert-card-info">
+            <span class="cert-card-issuer">Microsoft</span>
+            <span class="cert-card-title">Azure AI Fundamentals (AI-900)</span>
+            <span class="cert-card-link">Verificar credencial</span>
+          </div>
+        </a>
+
+        <a class="cert-card" href="https://www.credly.com/badges/08cf9744-1cdc-4f53-93f5-aa30fe8c1d05" target="_blank"
+          rel="noopener noreferrer">
+          <div class="cert-card-img">
+            <img src="./img/dig_leader.png" alt="Badge Digital Leader">
+          </div>
+          <div class="cert-card-info">
+            <span class="cert-card-issuer">Google</span>
+            <span class="cert-card-title">Digital Leader Professional Certificate</span>
+            <span class="cert-card-link">Verificar credencial</span>
+          </div>
+        </a>
       </div>
     </div>
-  </div>
-  <!--  Sobre mim  -->
-  <section class="sobre-bg" id="sobreMim">
+  </section>
+
+  <!-- Seção Experiência Profissional (Formato Currículo) -->
+  <section class="curriculo-secao experiencia-bg" id="experiencia">
+    <div class="container cv-container">
+      <div class="section-header">
+        <h2>EXPERIÊNCIA PROFISSIONAL</h2>
+        <p class="section-subtitle">
+          Atuação e projetos em Engenharia de Dados, arquiteturas escaláveis em nuvem e Inteligência Artificial.
+        </p>
+      </div>
+
+      <div class="cv-timeline">
+        <!-- Shopee -->
+        <article class="cv-item atual">
+          <div class="cv-header">
+            <div class="cv-entity-info">
+              <div class="cv-logo-wrapper">
+                <img src="./img/educa_job/shopee.png" alt="Logotipo Shopee">
+              </div>
+              <div class="cv-titles">
+                <h3 class="cv-role">Engenheiro de Dados</h3>
+                <div class="cv-company-row">
+                  <span class="cv-company">Shopee · FinTech Monee</span>
+                  <span class="cv-location">📍 São Paulo - SP</span>
+                </div>
+              </div>
+            </div>
+            <div class="cv-meta">
+              <span class="cv-period-badge atual">06/2026 – Atual</span>
+            </div>
+          </div>
+          <div class="cv-content">
+            <p class="cv-summary">
+              Atuação em pipelines de dados de alta escala na FinTech Monee (Shopee), ingestão de dados transacionais e
+              sustentação de arquiteturas analíticas robustas.
+            </p>
+            <ul class="cv-bullets">
+              <li>Desenvolvimento e orquestração de DAGs no Apache Airflow para ingestão de dados transacionais via SFTP
+                e integração contínua ao Data Lake.</li>
+              <li>Modelagem dimensional e estruturação de camadas (Medalhão: Bronze, Silver e Gold) utilizando PySpark e
+                Spark SQL.</li>
+              <li>Desenvolvimento de agente inteligente baseado em LLM para diagnóstico automatizado de falhas em DAGs,
+                reduzindo em até 90% o tempo de triagem operacional.</li>
+            </ul>
+            <div class="cv-tags">
+              <span class="cv-tag">PySpark</span>
+              <span class="cv-tag">Apache Airflow</span>
+              <span class="cv-tag">Data Lake</span>
+              <span class="cv-tag">SQL</span>
+              <span class="cv-tag">LLMs / IA</span>
+              <span class="cv-tag">FinTech</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- SantoDigital -->
+        <article class="cv-item">
+          <div class="cv-header">
+            <div class="cv-entity-info">
+              <div class="cv-logo-wrapper">
+                <img src="./img/educa_job/santo_digital.png" alt="Logotipo SantoDigital">
+              </div>
+              <div class="cv-titles">
+                <h3 class="cv-role">Engenheiro de Dados</h3>
+                <div class="cv-company-row">
+                  <span class="cv-company">SantoDigital · Consultoria Cloud</span>
+                  <span class="cv-location">📍 São Paulo - SP</span>
+                </div>
+              </div>
+            </div>
+            <div class="cv-meta">
+              <span class="cv-period-badge">01/2026 – 06/2026</span>
+            </div>
+          </div>
+          <div class="cv-content">
+            <p class="cv-summary">
+              Projetos de engenharia e modernização de dados corporativos focados no ecossistema Google Cloud Platform
+              (GCP).
+            </p>
+            <ul class="cv-bullets">
+              <li>Desenvolvimento de pipelines de ETL/ELT no BigQuery e orquestração com Cloud Composer (Airflow).</li>
+              <li>Automação de ingestão e web scraping utilizando microsserviços serverless em Cloud Run e Cloud
+                Functions, reduzindo em 70% o tempo de processos manuais.</li>
+              <li>Construção de views analíticas otimizadas e relatórios executivos no Looker Studio.</li>
+            </ul>
+            <div class="cv-tags">
+              <span class="cv-tag">Google Cloud (GCP)</span>
+              <span class="cv-tag">BigQuery</span>
+              <span class="cv-tag">Cloud Composer</span>
+              <span class="cv-tag">Cloud Run</span>
+              <span class="cv-tag">Python</span>
+              <span class="cv-tag">Looker Studio</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ultragaz - Engenheiro de Dados & IA -->
+        <article class="cv-item">
+          <div class="cv-header">
+            <div class="cv-entity-info">
+              <div class="cv-logo-wrapper">
+                <img src="./img/educa_job/ultragaz.png" alt="Logotipo Ultragaz">
+              </div>
+              <div class="cv-titles">
+                <h3 class="cv-role">Engenheiro de Dados & IA</h3>
+                <div class="cv-company-row">
+                  <span class="cv-company">Ultragaz</span>
+                  <span class="cv-location">📍 São Paulo - SP</span>
+                </div>
+              </div>
+            </div>
+            <div class="cv-meta">
+              <span class="cv-period-badge">02/2025 – 01/2026</span>
+            </div>
+          </div>
+          <div class="cv-content">
+            <p class="cv-summary">
+              Responsável pelo processo de ETL da companhia, desenvolvimento de automações de processos internos e
+              criação de aplicações utilizando Inteligência Artificial.
+            </p>
+            <ul class="cv-bullets">
+              <li>Construção e sustentação de pipelines ETL em streaming utilizando Azure Data Factory e Databricks para
+                processamento de dados com 1.000.000+ registros diários.</li>
+              <li>Modelagem de dados e armazenamento no Azure Data Lake.</li>
+              <li>Ingestão de dados provenientes de APIs, ERP (Oracle) e CRM (Salesforce).</li>
+              <li>Desenvolvimento de aplicações baseadas em Inteligência Artificial Generativa para prospecção de novos
+                clientes, com aumento de conversão de 20%.</li>
+              <li>Desenvolvimento de automações via Power Automate e Logic Apps.</li>
+            </ul>
+            <div class="cv-tags">
+              <span class="cv-tag">Azure Data Factory</span>
+              <span class="cv-tag">Databricks</span>
+              <span class="cv-tag">Azure Data Lake</span>
+              <span class="cv-tag">IA Generativa</span>
+              <span class="cv-tag">ETL Streaming</span>
+              <span class="cv-tag">Power Automate</span>
+              <span class="cv-tag">Logic Apps</span>
+              <span class="cv-tag">Oracle & Salesforce</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ultragaz - Estágio em BI & Dados -->
+        <article class="cv-item">
+          <div class="cv-header">
+            <div class="cv-entity-info">
+              <div class="cv-logo-wrapper">
+                <img src="./img/educa_job/ultragaz.png" alt="Logotipo Ultragaz">
+              </div>
+              <div class="cv-titles">
+                <h3 class="cv-role">Estágio em BI & Dados</h3>
+                <div class="cv-company-row">
+                  <span class="cv-company">Ultragaz</span>
+                  <span class="cv-location">📍 São Paulo - SP</span>
+                </div>
+              </div>
+            </div>
+            <div class="cv-meta">
+              <span class="cv-period-badge">2024 – 2025</span>
+            </div>
+          </div>
+          <div class="cv-content">
+            <p class="cv-summary">
+              Rotinas de Business Intelligence, extração e transformação de dados para suporte estratégico à tomada de
+              decisão.
+            </p>
+            <ul class="cv-bullets">
+              <li>Extração, transformação e carga (ETL) de bases relacionais utilizando SQL Server e scripts em Python.
+              </li>
+              <li>Modelagem dimensional e desenvolvimento de dashboards gerenciais de alta performance no Microsoft
+                Power BI.</li>
+              <li>Garantia da integridade e consistência das regras de negócio em relatórios operacionais e executivos.
+              </li>
+            </ul>
+            <div class="cv-tags">
+              <span class="cv-tag">Power BI</span>
+              <span class="cv-tag">SQL Server</span>
+              <span class="cv-tag">Python</span>
+              <span class="cv-tag">ETL</span>
+              <span class="cv-tag">Modelagem Dimensional</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="curriculo-divider" aria-hidden="true"></div>
+
+  <!-- Seção Formação Acadêmica (Formato Currículo) -->
+  <section class="curriculo-secao educacao-bg" id="educacao">
+    <div class="container cv-container">
+      <div class="section-header">
+        <h2>FORMAÇÃO ACADÊMICA</h2>
+        <p class="section-subtitle">
+          Especializações e graduação superior voltadas a software, modelos cognitivos e engenharia.
+        </p>
+      </div>
+
+      <div class="cv-timeline">
+        <!-- FIAP -->
+        <article class="cv-item atual">
+          <div class="cv-header">
+            <div class="cv-entity-info">
+              <div class="cv-logo-wrapper">
+                <img src="./img/educa_job/fiap.png" alt="Logotipo FIAP">
+              </div>
+              <div class="cv-titles">
+                <h3 class="cv-role">Pós-Graduação em IA para Desenvolvedores</h3>
+                <div class="cv-company-row">
+                  <span class="cv-company">FIAP · Especialização Lato Sensu</span>
+                  <span class="cv-location">📍 São Paulo - SP</span>
+                </div>
+              </div>
+            </div>
+            <div class="cv-meta">
+              <span class="cv-period-badge atual">10/2025 – Cursando</span>
+            </div>
+          </div>
+          <div class="cv-content">
+            <p class="cv-summary">
+              Especialização com ênfase em arquiteturas cognitivas modernas, engenharia de prompt, orquestração de LLMs
+              e aplicações reais de IA.
+            </p>
+            <ul class="cv-bullets">
+              <li>Desenvolvimento de soluções com RAG (Retrieval-Augmented Generation) e bancos de dados vetoriais.</li>
+              <li>Construção de fluxos complexos e agentes inteligentes autônomos com LangChain e LangGraph.</li>
+              <li>Técnicas de fine-tuning, avaliação de modelos de linguagem e integração de APIs cognitivas.</li>
+            </ul>
+            <div class="cv-tags">
+              <span class="cv-tag">IA Generativa</span>
+              <span class="cv-tag">RAG</span>
+              <span class="cv-tag">LangChain</span>
+              <span class="cv-tag">LangGraph</span>
+              <span class="cv-tag">LLMs</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- FECAP -->
+        <article class="cv-item">
+          <div class="cv-header">
+            <div class="cv-entity-info">
+              <div class="cv-logo-wrapper">
+                <img src="./img/educa_job/fecap.png" alt="Logotipo FECAP">
+              </div>
+              <div class="cv-titles">
+                <h3 class="cv-role">Análise e Desenvolvimento de Sistemas</h3>
+                <div class="cv-company-row">
+                  <span class="cv-company">FECAP · Graduação Tecnológica</span>
+                  <span class="cv-location">📍 São Paulo - SP</span>
+                </div>
+              </div>
+            </div>
+            <div class="cv-meta">
+              <span class="cv-period-badge">02/2023 – 12/2024</span>
+            </div>
+          </div>
+          <div class="cv-content">
+            <p class="cv-summary">
+              Graduação superior com sólida base em computação, arquitetura de software, modelagem de banco de dados e
+              engenharia.
+            </p>
+            <ul class="cv-bullets">
+              <li>Estrutura de dados, algoritmos, governança e modelagem de bancos de dados relacionais e analíticos.
+              </li>
+              <li>Desenvolvimento prático com IoT, Python, microsserviços e metodologias ágeis (Scrum / Kanban).</li>
+              <li>Participação ativa em projetos acadêmicos e monitoria técnica em programação.</li>
+            </ul>
+            <div class="cv-tags">
+              <span class="cv-tag">Engenharia de Software</span>
+              <span class="cv-tag">Banco de Dados</span>
+              <span class="cv-tag">Python</span>
+              <span class="cv-tag">IoT</span>
+              <span class="cv-tag">Metodologias Ágeis</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Sobre Mim -->
+  <section class="sobre-bg" id="sobre">
     <div class="sobre container">
       <div class="sobre-foto">
-        <img src="./img/fotos/foto2.jpg" alt="">
+        <div class="sobre-foto-wrapper">
+          <div class="sobre-foto-decor" aria-hidden="true"></div>
+          <div class="sobre-foto-moldura">
+            <img src="./img/fotos/foto2.jpg" alt="Kevin Shiroma em momento profissional e pessoal">
+          </div>
+          <!-- <div class="sobre-badge-exp"> -->
+          <!-- <span class="sobre-badge-icon" aria-hidden="true">✈️</span> -->
+          <!-- <div class="sobre-badge-text">
+              <strong>Brasil & Japão</strong>
+              <span>Vivência multicultural</span>
+            </div> -->
+          <!-- </div> -->
+        </div>
       </div>
+
       <div class="sobre-desc">
         <h2>SOBRE MIM</h2>
-        <h3>Um apaixonado pela tecnologia que também ama viajar </h3>
-        <p>Meu nome é Kevin Shiroma, sou nascido e criado em São Paulo. </p>
+        <h3>Um apaixonado pela tecnologia que também ama viajar</h3>
+        <p>Meu nome é Kevin Shiroma, sou nascido e criado em São Paulo.</p>
         <p>Em 2020 decidi morar no Japão para aprender mais sobre a cultura, o idioma e conhecer minha terra natal.</p>
         <p>Ao mesmo tempo comecei a estudar sobre a área da TI, que foi onde me encontrei.</p>
-        <p class="ultimo-paragrafo-sobre">Em 2022 decidi voltar ao Brasil e iniciei meus estudos em Análise e Desenvolvimento de Sistemas e desde então venho me apaixonando cada vez mais pela área.</p>
-        <a class="sobre-historia" href="sobre.html">Minha História <img src="./img/flecha-btn.svg" alt=""></a>
+        <p>Em 2022 decidi voltar ao Brasil e iniciei meus estudos em Análise e Desenvolvimento de Sistemas e desde então
+          venho me apaixonando cada vez mais pela área.</p>
+
+        <a class="sobre-historia" href="sobre.html">
+          Minha História <img src="./img/flecha-btn.svg" alt="" aria-hidden="true">
+        </a>
       </div>
     </div>
   </section>
 
-  <!--  Meus serviços  -->
-  <section class="servicos container" id="servicos">
-    <h2>MEUS SERVIÇOS</h2>
-    <div class="servicos-itens">
-      <div class="servicos-app caixa">
-        <img class="img-icones" src="./img/dados.svg" alt="">
-        <h3>Engenharia de Dados</h3>
-        <p>É a arte de criar pipelines que coletam e processam dados para gerar insights valiosos.</p>
-        <a href="dados.html">Como funciona? <img src="./img/flecha-btn.svg" alt=""></a>
-      </div> <!--  servicos-app caixa -->
 
-       <div class="servicos-web caixa">
-        <img class="img-icones" src="./img/front.svg" alt="">
-        <h3>Desenvolvimento Web</h3>
-        <p>Desenvolvimento de sites para sua empresa desde a programação até a hospedagem na internet.</p>
-        <a href="web.html">Como funciona? <img src="./img/flecha-btn.svg" alt=""></a>
-      </div> 
-
-      <!-- <div class="servicos-ui caixa">
-        <img class="img-icones" src="./img/ux.svg" alt="">
-        <h3>UX/UI Design</h3>
-        <p>Como criar um site ou app que forneça a melhor experiência ao seu cliente.</p>
-        <a href="ux.html">Como funciona? <img src="./img/flecha-btn.svg" alt=""></a>
-      </div> diferencial-escuta caixa -->
-
-
-
-      
-    </div> <!--  servicos-itens  -->
-  </section>
-
-  <!--  Portfólio  -->
-  <section class="portfolio container" id="portfolio">
-    <div class="titulo-portfolio">
-      <h2>PORTFÓLIO</h2>
-      <div class="servicos-portfolio">
-        <span class="filtro" data-filter="dados">ENGENHARIA DE DADOS</span>
-        <span class="filtro" data-filter="web">DESENVOLVIMENTO WEB</span>
-        
-      </div>
-    </div>
-
-    <!--dados-->
-    <div class="card-portfolio dados">
-      <img class="img-portfolio" src="./img/6.PNG" alt="">
-      <div class="card-texto">
-        <h3>Relatório de Vendas</h3>
-        <p> Ingestão de um CSV via Databricks até a criação de Dashboard pelo Power BI. </p>
-        <div class="portfolio-tech">
-          <span class="card-tech">Databricks</span>
-            <span class="card-tech">Apache Spark</span>
-            <span class="card-tech">Pyspark</span>
-            <span class="card-tech">Power Bi</span>
-        </div>
-        <div class="portfolio-grupo-link">
-            <div class="portfolio-link">
-              <a href="https://github.com/KevinShiroma/dl-db-dataengineer-vendas">Repositório</a>
-              <img src="./img/external-link.svg" alt="">
-            </div>
-            <div class="portfolio-link">
-              <a href="https://app.powerbi.com/view?r=eyJrIjoiODViYjI0ZmItYmVmMC00NWZhLWJlZDQtZDQyZDNkOWQ5NjA2IiwidCI6IjNlMjllMDhjLTMwODUtNDM2My1hYTkxLTE3MTNkZGE5NDM4YSJ9">Ver Dashboard</a>
-              <img src="./img/monitor.svg" alt="">
-            </div>
-          </div>
-      </div>
-    </div>
-
-    <!-- EduFECAP -->
-    <div class="card-portfolio ux-design">
-      <img class="img-portfolio" src="./img/miniaturas/edufecap.jpg" alt="">
-      <div class="card-texto">
-        <h3>EduFECAP</h3>
-        <p>O EduFECAP é um projeto criado para a criação de um app para alunos da FECAP (Fundação Escola de Comércio Álvares Penteado) com foco na melhor experiência de usabilidade.</p>
-        <div class="portfolio-tech">
-          <span class="card-tech">UX</span>
-          <span class="card-tech">UI</span>
-          <span class="card-tech">Figma</span>
-        </div>
-        <div class="portfolio-grupo-link">
-          <div class="portfolio-link">
-            <a href=https://drive.google.com/file/d/1ZBi8HDTqtmMESs7LFYbVdQjJcAw4NTSZ/view?usp=sharing>Ver ao vivo</a>
-            <img src="./img/external-link.svg" alt="">
-          </div>
-          <div class="portfolio-link">
-            <a href="https://www.figma.com/file/9NT3TuTCx4pf5zY5qm7aSR/FECAP-APP?type=design&node-id=83%3A797&mode=design&t=2znpPvwFwwEbRzMY-1">Ver Protótipo</a>
-            <img src="./img/monitor.svg" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-    <!-- meu onibus app -->
-    <div class="card-portfolio ux-design">
-      <img class="img-portfolio" src="./img//miniaturas/meuonibus.jpg" alt="">
-      <div class="card-texto">
-        <h3>MeuÔnibus APP</h3>
-        <p>O app MeuÔnibus nasceu na necessidade das pessoas de voltarem para casa no conforto depois de um longo dia de trabalho, com isso foi criado um protótipo de um app com foco na experiência do usuário. </p>
-        <div class="portfolio-tech">
-          <span class="card-tech">UX</span>
-          <span class="card-tech">UI</span>
-          <span class="card-tech">Figma</span>
-        </div>
-        <div class="portfolio-grupo-link">
-          <div class="portfolio-link">
-            <a href="https://drive.google.com/file/d/1gRrEyzsmygfLp_EfKjiARyNgDln23fI6/view?usp=sharing">Ver ao vivo</a>
-            <img src="./img/external-link.svg" alt="">
-          </div>
-          <div class="portfolio-link">
-            <a href="https://www.figma.com/file/TdPKJcXFCJgck0r9MwfmLc/Google-UX?type=design&node-id=58%3A70&mode=design&t=st1PSOKGjYWcUssF-1">Ver Protótipo</a>
-            <img src="./img/monitor.svg" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-    <!-- Mercia -->
-    <div class="card-portfolio ux-design web">
-      <img class="img-portfolio" src="./img/miniaturas/mercia.jpg" alt="">
-      <div class="card-texto">
-        <h3>Mércia Locação e Decoração</h3>
-        <p>
-          Site criado com o objetivo aumentar a visibilidade de uma mulher empreendedora no meio digital e utilizar o site como portifólio para atingir possíveis cliente. </p>
-        <div class="portfolio-tech">
-          <span class="card-tech">UX</span>
-          <span class="card-tech">UI</span>
-          <span class="card-tech">Figma</span>
-          <span class="card-tech">HTML</span>
-          <span class="card-tech">CSS</span>
-          <span class="card-tech">JavaScript</span>
-        </div>
-        <div class="portfolio-grupo-link">
-          <div class="portfolio-link">
-            <a href="https://2023-2-nads2.github.io/Projeto6/">Ver ao vivo</a>
-            <img src="./img/external-link.svg" alt="">
-          </div>
-          <div class="portfolio-link">
-            <a href="https://www.figma.com/file/N4dqfF7mm87VX6d7lhWJBd/Mercia?type=design&node-id=1%3A642&mode=design&t=KXcswQRCctsmKe0H-1">Ver Protótipo</a>
-            <img src="./img/monitor.svg" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Fisio -->
-    <div class="card-portfolio ux-design web">
-      <img class="img-portfolio" src="./img/miniaturas/ana.jpg" alt="">
-      <div class="card-texto">
-        <h3>Ana Paula Fisioterapeuta</h3>
-        <p>
-          Site criado com o objetivo aumentar a visibilidade de uma Fisioterapeuta que deseja atingir e encontrar seus clientes online. </p>
-        <div class="portfolio-tech">
-          <span class="card-tech">UX</span>
-          <span class="card-tech">UI</span>
-          <span class="card-tech">Figma</span>
-          <span class="card-tech">HTML</span>
-          <span class="card-tech">CSS</span>
-          <span class="card-tech">JavaScript</span>
-        </div>
-        <div class="portfolio-grupo-link">
-          <div class="portfolio-link">
-            <a href="https://kevinshiroma.github.io/anafisioterapeuta/">Ver ao vivo</a>
-            <img src="./img/external-link.svg" alt="">
-          </div>
-          <div class="portfolio-link">
-            <a href="https://www.figma.com/file/4APSa2h2lHyKvDwgbZT05r/Ana-Paula-Tamae?type=design&node-id=0%3A1&mode=design&t=Ub4PwCOxqCTeUwAw-1">Ver Protótipo</a>
-            <img src="./img/monitor.svg" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- bikecraft -->
-    <div class="card-portfolio ux-design web">
-      <img class="img-portfolio" src="./img/miniaturas/bik.jpg" alt="">
-      <div class="card-texto">
-        <h3>Bikcraft</h3>
-        <p>
-          Site para vendas de bicicletas de luxo e de seguros para as bicicletas, com site prototipado e programado. </p>
-        <div class="portfolio-tech">
-          <span class="card-tech">UX</span>
-          <span class="card-tech">UI</span>
-          <span class="card-tech">Figma</span>
-          <span class="card-tech">HTML</span>
-          <span class="card-tech">CSS</span>
-          <span class="card-tech">JavaScript</span>
-        </div>
-        <div class="portfolio-grupo-link">
-          <div class="portfolio-link">
-            <a href="https://kevinshiroma.github.io/bikcraft/">Ver ao vivo</a>
-            <img src="./img/external-link.svg" alt="">
-          </div>
-          <div class="portfolio-link">
-            <a href="https://www.figma.com/file/3y2XJt6XxUziVuKtV3kaFd/Bikcraft?type=design&node-id=6%3A137&mode=design&t=RRqrjie3Wq5c3GBb-1">Ver Protótipo</a>
-            <img src="./img/monitor.svg" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-  </section>
-
-
+  <!-- Rodapé Moderno -->
   <footer class="footer-bg">
     <div class="footer container">
-      <div class="footer-img">
-        <a href="index.html"><img src="./img/logo-footer.svg" alt=""> </a>
-      </div> <!--footer-img-->
-      <div class="footer-redes">
-        <h1>CONTATO</h1>
-        <div class="footer-icons">
-          <a href="https://www.linkedin.com/in/kevinmakotos/"><img src="./img/linkedin-footer.svg" alt=""></a>
-          <a href="https://github.com/KevinShiroma"><img src="./img/github-footer.svg" alt=""></a>
+      <div class="footer-brand">
+        <div class="footer-img">
+          <a href="index.html" aria-label="Ir ao início">
+            <img src="./img/logo-footer.svg" alt="Kevin Shiroma Logotipo">
+          </a>
         </div>
-      </div> <!--footer-redes-->
-      <div class="footer-info">
-        <h1>INFORMAÇÕES</h1>
+        <p class="footer-tagline">
+          Engenheiro de Dados e IA com foco em soluções escaláveis, automação e arquiteturas em nuvem.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>NAVEGAÇÃO</h4>
         <ul class="footer-nav">
           <li><a href="index.html">Início</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="termos.html">Termos e Condições</a></li>
-          <li><a href="privacidade.html">Política de Privacidade</a></li>
+          <li><a href="#experiencia">Experiência Profissional</a></li>
+          <li><a href="#educacao">Formação Acadêmica</a></li>
+          <li><a href="#certificacoes">Certificações</a></li>
+          <li><a href="sobre.html">Sobre Mim & História</a></li>
+          <li><a href="./curriculo-kevin-engenheiro de dados.pdf" target="_blank" rel="noopener noreferrer">Currículo em
+              PDF</a></li>
         </ul>
-      </div> <!--footer-info-->
-      <span class="footer-direitos">Kevin Shiroma © Todos os direitos reservados</span>
-    </div> <!--footer container-->
+      </div>
+
+      <div class="footer-col">
+        <h4>CONTATO & REDES</h4>
+        <div class="footer-redes-list">
+          <a class="footer-social-link" href="https://www.linkedin.com/in/kevinmakotos/" target="_blank"
+            rel="noopener noreferrer" aria-label="Acessar perfil no LinkedIn">
+            <img src="./img/linkedin-footer.svg" alt="LinkedIn">
+          </a>
+          <a class="footer-social-link" href="https://github.com/KevinShiroma" target="_blank" rel="noopener noreferrer"
+            aria-label="Acessar perfil no GitHub">
+            <img src="./img/github-footer.svg" alt="GitHub">
+          </a>
+          <a class="footer-social-link" href="https://wa.me/5511911171995?text=Ol%C3%A1%2C%20vim%20do%20seu%20site!"
+            target="_blank" rel="noopener noreferrer" aria-label="Enviar mensagem no WhatsApp">
+            <img src="./img/flecha-btn.svg" alt="WhatsApp">
+          </a>
+        </div>
+        <p style="font-size: 0.9rem; color: #a0aec0; margin-bottom: 0;">
+          São Paulo, SP - Brasil<br>
+          Aberto a oportunidades nacionais e remotas.
+        </p>
+      </div>
+
+      <div class="footer-bottom">
+        <span>Kevin Shiroma © Todos os direitos reservados.</span>
+        <span>Desenvolvido com HTML, CSS e JavaScript puros.</span>
+      </div>
+    </div>
   </footer>
 
-
+  <!-- Scripts Modulares -->
   <script type="module" src="./js/script.js"></script>
-
 </body>
 
 </html>

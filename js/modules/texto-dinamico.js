@@ -1,28 +1,30 @@
 export default function initTextoDinamico() {
+  const elementoTexto = document.getElementById('textoDinamico');
+  if (!elementoTexto) return;
+
   const textos = [
     'Engenheiro de Dados 👷🎲',
     'Aspirante a Cozinheiro 👨‍🍳',
-    'Corredor 🏃‍♂️ '
+    'Corredor 🏃‍♂️'
   ];
   let indiceTextoAtual = 0;
+  const intervaloDigitacao = 35;
+  const intervaloApagar = 25;
+  const pausaAposDigitar = 2200;
+  const pausaAposApagar = 400;
 
   function escreverTexto() {
-    const elementoTexto = document.getElementById('textoDinamico');
     elementoTexto.textContent = '';
-
     const textoAtual = textos[indiceTextoAtual];
-    const intervaloDigitacao = 30; // Ajuste conforme necessário
-
     let i = 0;
 
     function adicionarCaractere() {
-      elementoTexto.textContent += textoAtual[i];
-      i++;
-
-      if (i === textoAtual.length) {
-        setTimeout(apagarTexto, 2000);
-      } else {
+      if (i < textoAtual.length) {
+        elementoTexto.textContent += textoAtual[i];
+        i++;
         setTimeout(adicionarCaractere, intervaloDigitacao);
+      } else {
+        setTimeout(apagarTexto, pausaAposDigitar);
       }
     }
 
@@ -30,23 +32,23 @@ export default function initTextoDinamico() {
   }
 
   function apagarTexto() {
-    const elementoTexto = document.getElementById('textoDinamico');
-    const intervaloApagar = 30; // Ajuste conforme necessário
-
     function removerCaractere() {
       const textoAtual = elementoTexto.textContent;
-      elementoTexto.textContent = textoAtual.slice(0, -1);
-
-      if (textoAtual.length === 0) {
-        indiceTextoAtual = (indiceTextoAtual + 1) % textos.length;
-        setTimeout(escreverTexto, 500);
-      } else {
+      if (textoAtual.length > 0) {
+        elementoTexto.textContent = textoAtual.slice(0, -1);
         setTimeout(removerCaractere, intervaloApagar);
+      } else {
+        indiceTextoAtual = (indiceTextoAtual + 1) % textos.length;
+        setTimeout(escreverTexto, pausaAposApagar);
       }
     }
 
     removerCaractere();
   }
 
-  document.addEventListener('DOMContentLoaded', escreverTexto);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', escreverTexto);
+  } else {
+    escreverTexto();
+  }
 }

@@ -1,100 +1,239 @@
+/* ==========================================================================
+   SEÇÃO SOBRE MIM
+   ========================================================================== */
+
 .sobre-bg {
   background-color: var(--fundo);
-  box-shadow: inset 0 80px var(--white);
-  box-shadow: inset 0 80px var(--white), inset 0 -80px var(--white);
+  border-top: 1px solid var(--borda-suave);
+  padding: 80px 0;
+  position: relative;
 }
 
 .sobre {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  margin-top: 100px;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 60px;
   align-items: center;
 }
 
+/* Container Estilizado da Foto (Dentro da Seção) */
+.sobre-foto {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
 
+.sobre-foto-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
 
+/* Moldura decorativa deslocada atrás da foto */
+.sobre-foto-decor {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: -16px;
+  bottom: -16px;
+  border: 2px solid var(--primaria1);
+  border-radius: 24px;
+  background-color: rgba(87, 197, 80, 0.05);
+  z-index: 1;
+  transition: transform 0.35s ease, border-color 0.35s ease;
+}
 
-.sobre-foto img {
+.sobre-foto-wrapper:hover .sobre-foto-decor {
+  transform: translate(4px, 4px);
+  border-color: var(--primaria4);
+}
+
+/* Moldura principal da imagem */
+.sobre-foto-moldura {
+  position: relative;
+  z-index: 2;
   border-radius: 20px;
-  width: 500px;
-  height: 900px;
+  overflow: hidden;
+  border: 6px solid var(--white);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.05);
+  background-color: var(--white);
+}
+
+.sobre-foto-moldura img {
+  width: 100%;
+  height: 480px;
   object-fit: cover;
+  display: block;
+  border-radius: 14px;
+  transition: transform 0.4s ease;
+}
+
+.sobre-foto-wrapper:hover .sobre-foto-moldura img {
+  transform: scale(1.03);
+}
+
+/* Badge flutuante estilizado na foto */
+.sobre-badge-exp {
+  position: absolute;
+  bottom: 22px;
+  right: -18px;
+  z-index: 3;
+  background-color: var(--white);
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--borda-suave);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: float-badge 4s ease-in-out infinite alternate;
+}
+
+.sobre-badge-icon {
+  font-size: 1.4rem;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background-color: var(--verde-fraco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sobre-badge-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.sobre-badge-text strong {
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  color: var(--black);
+  line-height: 1.2;
+}
+
+.sobre-badge-text span {
+  font-size: 0.76rem;
+  color: var(--cinza-texto);
+  font-weight: 500;
+}
+
+/* Coluna de Descrição */
+.sobre-desc {
+  padding: 0;
 }
 
 .sobre-desc h2 {
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.sobre-desc h3 {
+  font-size: 1.45rem;
+  color: var(--black);
+  line-height: 1.35;
+  margin-bottom: 18px;
 }
 
 .sobre-desc p {
-  max-width: 38ch;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: var(--cinza-texto);
+  line-height: 1.65;
 }
 
 .sobre-historia {
-  font-family: "Poppins";
-  font-size: 1.6rem;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primaria4);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   position: relative;
-  z-index: 1;
-  display: inline-block;
+  padding: 8px 0;
+  margin-top: 12px;
+  transition: var(--transition-normal);
+}
+
+.sobre-historia::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primaria1);
+  transform: scaleX(0.4);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.sobre-historia:hover {
+  color: var(--verde-escuro);
+}
+
+.sobre-historia:hover::after {
+  transform: scaleX(1);
 }
 
 .sobre-historia img {
   display: inline-block;
+  transition: transform 0.25s ease;
 }
 
-.sobre-historia:hover:after {
-  content: "";
-  position: absolute;
-  animation: sublinha-historia 0.3s forwards;
-  top: calc(100% - 20%);
-  left: 10px;
-  z-index: -1;
-  top: 20px;
+.sobre-historia:hover img {
+  transform: translateX(4px);
 }
 
-@keyframes sublinha-historia {
-  from {
-    background-color: var(--primaria1);
-    
-    width: 0px;
-    height: 16px;
-  }
-  to {
-    background-color: var(--primaria1);
-    display: block;
-    width: 100%;
-    height: 16px;
-  }
-}
-
-.ultimo-paragrafo-sobre{
-  margin-bottom: 60px;
-}
-
-@media (max-width: 769px) {
+/* Responsividade */
+@media (max-width: 900px) {
   .sobre-bg {
-    box-shadow: none;
+    padding: 60px 0;
   }
 
   .sobre {
     grid-template-columns: 1fr;
-    margin-top: 60px;
-    flex-direction: column;
+    gap: 48px;
+  }
+
+  .sobre-foto {
+    order: 2;
   }
 
   .sobre-desc {
     order: 1;
   }
 
-  .sobre-foto img {
-    border-radius: 5px;
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
+  .sobre-foto-wrapper {
+    max-width: 360px;
   }
 
-  .sobre-foto {
-    order: 2;
+  .sobre-foto-moldura img {
+    height: 420px;
+  }
+
+  .sobre-badge-exp {
+    right: 0;
+    bottom: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre-foto-decor {
+    top: 10px;
+    left: 10px;
+    right: -10px;
+    bottom: -10px;
+  }
+
+  .sobre-foto-moldura img {
+    height: 360px;
+  }
+
+  .sobre-badge-exp {
+    position: static;
+    margin-top: 16px;
+    justify-content: center;
   }
 }

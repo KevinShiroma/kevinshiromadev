@@ -1,4 +1,5 @@
-:root{
+:root {
+  /* Paleta original rigorosamente preservada */
   --primaria1: #57C550;
   --primaria4: #30A529;
   --verde-escuro: #004217;
@@ -10,6 +11,28 @@
   --cinza: #9c9c9c;
   --fundo: #F7F7F7;
   --neutro: #0e1013;
+
+  /* Variações tonais das cores originais */
+  --cinza-claro: #ececec;
+  --cinza-texto: #596573;
+  --borda-suave: #e2e5e8;
+  --primaria1-transparente: rgba(87, 197, 80, 0.15);
+  --contraste-transparente: rgba(255, 114, 98, 0.12);
+
+  /* Padrão de sombras original mantido e padronizado */
+  --shadow-header: 0px 2px 2px 1px rgba(0, 0, 0, 0.1);
+  --shadow-card: 1px 1px 4px 2px rgba(0, 0, 0, 0.10);
+  --shadow-hover: 2px 4px 10px 2px rgba(0, 0, 0, 0.14);
+  --shadow-mobile-menu: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+
+  /* Tipografia e Raios de Borda */
+  --font-heading: 'Fira Sans', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+  --transition-normal: 0.25s ease-in-out;
 }
 
 * {
@@ -20,110 +43,218 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Fira Sans', sans-serif, Verdana, Tahoma, sans-serif;
- 
+  scroll-padding-top: 90px;
+  font-family: var(--font-body);
+  background-color: var(--fundo);
+  color: var(--black);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
-  font-family:"Poppins";
+  font-family: var(--font-body);
+  background-color: var(--fundo);
+  color: var(--black);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
 img {
   display: block;
   max-width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
 a {
   text-decoration: none;
-  color: var(--black);
+  color: inherit;
+  transition: var(--transition-normal);
 }
 
-ul,
-li,
-dd,
-dt,
-dd {
+ul, ol, li {
   list-style: none;
 }
 
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 25px;
+  padding: 0 24px;
+}
+
+/* Tipografia Hierárquica */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--black);
+  line-height: 1.25;
 }
 
 h1 {
-  font-size: 2.75rem;
+  font-size: 2.85rem;
+  font-weight: 800;
   margin-bottom: 16px;
-  font-family: 'Fira Sans', sans-serif;
+  letter-spacing: -0.02em;
 }
 
 h2 {
-  font-size: 1.5rem;
-  margin-bottom: 16px;
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: bold;
+  font-size: 1.85rem;
+  font-weight: 700;
+  margin-bottom: 24px;
   color: var(--primaria4);
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  letter-spacing: -0.01em;
 }
 
-h3 {
-  font-size: 1.3rem;
-  margin-bottom: 16px;
-  font-family: 'Fira Sans', sans-serif;
-}
-
-p{
-  font-size: 1.2rem;
-  margin-bottom: 16px;
-}
-
+/* Indicador característico da marca mantido com as cores originais */
 h2::before {
   content: "";
   display: inline-block;
   width: 12px;
   height: 12px;
   background-color: var(--contraste);
-  top: 5px;
-  margin-right: 16px;
-  margin-bottom: 4px;
-  
+  border-radius: 2px;
+  margin-right: 14px;
+  flex-shrink: 0;
 }
 
-.button{
+.section-header {
+  margin-bottom: 35px;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--cinza-texto);
+  margin-top: -12px;
+  max-width: 650px;
+}
+
+h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 1.05rem;
+  color: var(--cinza-texto);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* Botões do Sistema de Design */
+.button {
   padding: 12px 24px;
-  border-radius: 5px;
+  border-radius: var(--radius-sm);
   background: var(--primaria1);
-  font-weight: bold;
+  font-weight: 700;
   color: var(--black);
-  display: inline-block;
-  margin-left: 0px;
-  margin-bottom: 30px;
-  font-size: 1.3rem;
-  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.05rem;
+  transition: var(--transition-normal);
   text-align: center;
-  vertical-align: middle;
+  box-shadow: var(--shadow-card);
+  border: 1px solid transparent;
 }
 
-.button:hover{
+.button:hover {
   background-color: var(--primaria4);
-  vertical-align: middle;
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
 }
 
-.button img{
+.button:hover img {
+  transform: translateX(4px);
+  filter: brightness(0) invert(1);
+}
+
+.button img {
   display: inline-block;
-  vertical-align: middle; /* Alinha a imagem verticalmente */
-  margin-left: 12px;
+  transition: var(--transition-normal);
 }
 
-/* .js-scroll {
-  opacity: 0;
-  transform: translate3d(-30px, 0, 0);
-  transition: 0.5s;
+.button-secondary {
+  background-color: var(--white);
+  color: var(--black);
+  border: 1px solid var(--borda-suave);
+  box-shadow: var(--shadow-card);
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.js-scroll.ativo {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-} */
+.button-secondary:hover {
+  background-color: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Badges e tags */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  background-color: var(--verde-fraco);
+  color: var(--verde-escuro);
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primaria4);
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(48, 165, 41, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(48, 165, 41, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(48, 165, 41, 0); }
+}
+
+/* Acessibilidade de foco */
+:focus-visible {
+  outline: 2px solid var(--primaria4);
+  outline-offset: 3px;
+}
+
+/* Responsividade utilitária */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.1rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 14px;
+  }
+  .section-header {
+    margin-bottom: 22px;
+  }
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+  .container {
+    padding: 0 20px;
+  }
+}

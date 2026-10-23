@@ -1,11 +1,8 @@
-@import './header.css';
 @import './global.css';
 @import './fonts.css';
-
+@import './header.css';
 @import './intro.css';
+@import './experiencia.css';
 @import './sobre.css';
-@import './servicos.css';
-@import './portfolio.css';
 @import './footer.css';
-
 @import './historia.css';
